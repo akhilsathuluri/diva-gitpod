@@ -1,0 +1,350 @@
+<?xml version="1.0"?>
+<robot  name="divar3v8394221887" >
+ <material  name="blue" >
+  <color  rgba="0 0 0.8 1.0" />
+ </material>
+ <material  name="red" >
+  <color  rgba="0.8 0 0 1.0" />
+ </material>
+ <link  name="base_link" >
+  <visual >
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <material  name="red" />
+   <geometry >
+    <cylinder  radius="0.1"  length="0.05" />
+   </geometry>
+  </visual>
+ </link>
+ <joint  type="revolute"  name="joint1" >
+  <parent  link="base_link" />
+  <child  link="link1" />
+  <origin  xyz="0 0 0"  rpy="0 0 0" />
+  <axis  xyz="0 0 1" />
+ </joint>
+ <link  name="link1" >
+  <inertial >
+   <origin  xyz="0 0 0.08333356463159802"  rpy="0 0 0" />
+   <mass  value="1.7500048572635587" />
+   <inertia  iyz="0.0"  ixy="0.0"  ixz="0.0"  ixx="0.005509297038069449"  izz="0.005509297038069449"  iyy="0.0029166747621059315" />
+  </inertial>
+  <visual >
+   <origin  xyz="0 0 0.08333356463159802"  rpy="0 0 0" />
+   <material  name="blue" />
+   <geometry >
+    <box  size="0.05 0.1 0.16666712926319605" />
+   </geometry>
+  </visual>
+ </link>
+ <joint  type="fixed"  name="joint-joint-1" >
+  <parent  link="link1" />
+  <child  link="joint-link-1" />
+  <origin  xyz="0 0 0.16666712926319605"  rpy="1.5707 0 0" />
+  <axis  xyz="1 0 0" />
+ </joint>
+ <link  name="joint-link-1" >
+  <inertial >
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <mass  value="0.29715761911256344" />
+   <inertia  iyz="0"  ixy="0"  ixz="0"  ixx="0"  izz="0"  iyy="0" />
+  </inertial>
+  <visual >
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <material  name="red" />
+   <geometry >
+    <sphere  radius="0.05" />
+   </geometry>
+  </visual>
+ </link>
+ <joint  type="revolute"  name="joint2" >
+  <parent  link="link1" />
+  <child  link="link2" />
+  <origin  xyz="0 0 0.16666712926319605"  rpy="1.5707 0 0" />
+  <axis  xyz="1 0 0" />
+ </joint>
+ <link  name="link2" >
+  <inertial >
+   <origin  xyz="0 0 0.021509512387688414"  rpy="0 0 0" />
+   <mass  value="0.4516997601414568" />
+   <inertia  iyz="0.0"  ixy="0.0"  ixz="0.0"  ixx="0.00044607747177017297"  izz="0.00044607747177017297"  iyy="0.0007528329335690948" />
+  </inertial>
+  <visual >
+   <origin  xyz="0 0 0.021509512387688414"  rpy="0 0 0" />
+   <material  name="blue" />
+   <geometry >
+    <box  size="0.05 0.1 0.04301902477537683" />
+   </geometry>
+  </visual>
+ </link>
+ <joint  type="fixed"  name="joint-joint-2" >
+  <parent  link="link2" />
+  <child  link="joint-link-2" />
+  <origin  xyz="0 0 0.04301902477537683"  rpy="1.5707 0 0" />
+  <axis  xyz="1 0 0" />
+ </joint>
+ <link  name="joint-link-2" >
+  <inertial >
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <mass  value="0.29715761911256344" />
+   <inertia  iyz="0"  ixy="0"  ixz="0"  ixx="0"  izz="0"  iyy="0" />
+  </inertial>
+  <visual >
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <material  name="red" />
+   <geometry >
+    <sphere  radius="0.05" />
+   </geometry>
+  </visual>
+ </link>
+ <joint  type="revolute"  name="joint3" >
+  <parent  link="link2" />
+  <child  link="link3" />
+  <origin  xyz="0 0 0.04301902477537683"  rpy="0 0 0" />
+  <axis  xyz="0 0 1" />
+ </joint>
+ <link  name="link3" >
+  <inertial >
+   <origin  xyz="0 0 0.0937426553320799"  rpy="0 0 0" />
+   <mass  value="1.9685957619736782" />
+   <inertia  iyz="0.0"  ixy="0.0"  ixz="0.0"  ixx="0.007406963232482943"  izz="0.007406963232482943"  iyy="0.0032809929366227975" />
+  </inertial>
+  <visual >
+   <origin  xyz="0 0 0.0937426553320799"  rpy="0 0 0" />
+   <material  name="blue" />
+   <geometry >
+    <box  size="0.05 0.1 0.1874853106641598" />
+   </geometry>
+  </visual>
+ </link>
+ <joint  type="fixed"  name="joint-joint-3" >
+  <parent  link="link3" />
+  <child  link="joint-link-3" />
+  <origin  xyz="0 0 0.1874853106641598"  rpy="1.5707 0 0" />
+  <axis  xyz="1 0 0" />
+ </joint>
+ <link  name="joint-link-3" >
+  <inertial >
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <mass  value="0.29715761911256344" />
+   <inertia  iyz="0"  ixy="0"  ixz="0"  ixx="0"  izz="0"  iyy="0" />
+  </inertial>
+  <visual >
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <material  name="red" />
+   <geometry >
+    <sphere  radius="0.05" />
+   </geometry>
+  </visual>
+ </link>
+ <joint  type="revolute"  name="joint4" >
+  <parent  link="link3" />
+  <child  link="link4" />
+  <origin  xyz="0 0 0.1874853106641598"  rpy="0 0 0" />
+  <axis  xyz="0 1 0" />
+ </joint>
+ <link  name="link4" >
+  <inertial >
+   <origin  xyz="0 0 0.12144501890137956"  rpy="0 0 0" />
+   <mass  value="2.550345396928971" />
+   <inertia  iyz="0.0"  ixy="0.0"  ixz="0.0"  ixx="0.014663544628408874"  izz="0.014663544628408874"  iyy="0.004250575661548285" />
+  </inertial>
+  <visual >
+   <origin  xyz="0 0 0.12144501890137956"  rpy="0 0 0" />
+   <material  name="blue" />
+   <geometry >
+    <box  size="0.05 0.1 0.2428900378027591" />
+   </geometry>
+  </visual>
+ </link>
+ <joint  type="fixed"  name="joint-joint-4" >
+  <parent  link="link4" />
+  <child  link="joint-link-4" />
+  <origin  xyz="0 0 0.2428900378027591"  rpy="1.5707 0 0" />
+  <axis  xyz="1 0 0" />
+ </joint>
+ <link  name="joint-link-4" >
+  <inertial >
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <mass  value="0.29715761911256344" />
+   <inertia  iyz="0"  ixy="0"  ixz="0"  ixx="0"  izz="0"  iyy="0" />
+  </inertial>
+  <visual >
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <material  name="red" />
+   <geometry >
+    <sphere  radius="0.05" />
+   </geometry>
+  </visual>
+ </link>
+ <joint  type="revolute"  name="joint5" >
+  <parent  link="link4" />
+  <child  link="link5" />
+  <origin  xyz="0 0 0.2428900378027591"  rpy="0 0 0" />
+  <axis  xyz="0 0 1" />
+ </joint>
+ <link  name="link5" >
+  <inertial >
+   <origin  xyz="0 0 0.04040028321961785"  rpy="0 0 0" />
+   <mass  value="0.848405947611975" />
+   <inertia  iyz="0.0"  ixy="0.0"  ixz="0.0"  ixx="0.0011685895118657267"  izz="0.0011685895118657267"  iyy="0.0014140099126866252" />
+  </inertial>
+  <visual >
+   <origin  xyz="0 0 0.04040028321961785"  rpy="0 0 0" />
+   <material  name="blue" />
+   <geometry >
+    <box  size="0.05 0.1 0.0808005664392357" />
+   </geometry>
+  </visual>
+ </link>
+ <joint  type="fixed"  name="joint-joint-5" >
+  <parent  link="link5" />
+  <child  link="joint-link-5" />
+  <origin  xyz="0 0 0.0808005664392357"  rpy="1.5707 0 0" />
+  <axis  xyz="1 0 0" />
+ </joint>
+ <link  name="joint-link-5" >
+  <inertial >
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <mass  value="0.29715761911256344" />
+   <inertia  iyz="0"  ixy="0"  ixz="0"  ixx="0"  izz="0"  iyy="0" />
+  </inertial>
+  <visual >
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <material  name="red" />
+   <geometry >
+    <sphere  radius="0.05" />
+   </geometry>
+  </visual>
+ </link>
+ <joint  type="revolute"  name="joint6" >
+  <parent  link="link5" />
+  <child  link="link6" />
+  <origin  xyz="0 0 0.0808005664392357"  rpy="0 0 0" />
+  <axis  xyz="0 1 0" />
+ </joint>
+ <link  name="link6" >
+  <inertial >
+   <origin  xyz="0 0 0.0005"  rpy="0 0 0" />
+   <mass  value="0.010500000000000002" />
+   <inertia  iyz="0.0"  ixy="0.0"  ixz="0.0"  ixx="8.750875000000003e-06"  izz="8.750875000000003e-06"  iyy="1.7500000000000005e-05" />
+  </inertial>
+  <visual >
+   <origin  xyz="0 0 0.0005"  rpy="0 0 0" />
+   <material  name="blue" />
+   <geometry >
+    <box  size="0.05 0.1 0.001" />
+   </geometry>
+  </visual>
+ </link>
+ <joint  type="revolute"  name="joint7" >
+  <parent  link="link6" />
+  <child  link="link7" />
+  <origin  xyz="0 0 0.001"  rpy="0 0 0" />
+  <axis  xyz="1 0 0" />
+ </joint>
+ <link  name="link7" >
+  <inertial >
+   <origin  xyz="0 0 0.11326939656368579"  rpy="0 0 0" />
+   <mass  value="2.378657327837402" />
+   <inertia  iyz="0.0"  ixy="0.0"  ixz="0.0"  ixx="0.012154904215188278"  izz="0.012154904215188278"  iyy="0.003964428879729004" />
+  </inertial>
+  <visual >
+   <origin  xyz="0 0 0.11326939656368579"  rpy="0 0 0" />
+   <material  name="blue" />
+   <geometry >
+    <box  size="0.05 0.1 0.22653879312737157" />
+   </geometry>
+  </visual>
+ </link>
+ <joint  type="fixed"  name="eef_joint" >
+  <parent  link="link7" />
+  <child  link="eef" />
+  <origin  xyz="0 0 0.22653879312737157"  rpy="0 0 0" />
+ </joint>
+ <link  name="eef" >
+  <inertial >
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <mass  value="1" />
+   <inertia  iyz="0"  ixy="0"  ixz="0"  ixx="0"  izz="0"  iyy="0" />
+  </inertial>
+ </link>
+ <transmission  name="motor1" >
+  <type  xmltext="SimpleTransmission" >
+   SimpleTransmission
+  </type>
+  <actuator  name="motor1" >
+   <mechanicalreduction  xmltext="1" >
+    1
+   </mechanicalreduction>
+  </actuator>
+  <joint  name="joint1" />
+ </transmission>
+ <transmission  name="motor2" >
+  <type  xmltext="SimpleTransmission" >
+   SimpleTransmission
+  </type>
+  <actuator  name="motor2" >
+   <mechanicalreduction  xmltext="1" >
+    1
+   </mechanicalreduction>
+  </actuator>
+  <joint  name="joint2" />
+ </transmission>
+ <transmission  name="motor3" >
+  <type  xmltext="SimpleTransmission" >
+   SimpleTransmission
+  </type>
+  <actuator  name="motor3" >
+   <mechanicalreduction  xmltext="1" >
+    1
+   </mechanicalreduction>
+  </actuator>
+  <joint  name="joint3" />
+ </transmission>
+ <transmission  name="motor4" >
+  <type  xmltext="SimpleTransmission" >
+   SimpleTransmission
+  </type>
+  <actuator  name="motor4" >
+   <mechanicalreduction  xmltext="1" >
+    1
+   </mechanicalreduction>
+  </actuator>
+  <joint  name="joint4" />
+ </transmission>
+ <transmission  name="motor5" >
+  <type  xmltext="SimpleTransmission" >
+   SimpleTransmission
+  </type>
+  <actuator  name="motor5" >
+   <mechanicalreduction  xmltext="1" >
+    1
+   </mechanicalreduction>
+  </actuator>
+  <joint  name="joint5" />
+ </transmission>
+ <transmission  name="motor6" >
+  <type  xmltext="SimpleTransmission" >
+   SimpleTransmission
+  </type>
+  <actuator  name="motor6" >
+   <mechanicalreduction  xmltext="1" >
+    1
+   </mechanicalreduction>
+  </actuator>
+  <joint  name="joint6" />
+ </transmission>
+ <transmission  name="motor7" >
+  <type  xmltext="SimpleTransmission" >
+   SimpleTransmission
+  </type>
+  <actuator  name="motor7" >
+   <mechanicalreduction  xmltext="1" >
+    1
+   </mechanicalreduction>
+  </actuator>
+  <joint  name="joint7" />
+ </tran
+mission>
+</robot>
+
+

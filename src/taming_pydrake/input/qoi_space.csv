@@ -1,0 +1,8 @@
+Variables,Lower,Upper,Units,Description
+tcycle,0,5,s,Time taken to reach the destination location
+reachability,0,2,,Feasibility of reaching the required points in the workspace
+applied_force,0,2,,Feasibility of the force applied by the end-effector (based on the maximum torqure of the motor selected)
+payload,0,2,,Feasibility of carrying a 1 kg payload at fully stretched condition (based on the maximum torqure of the motor selected)
+motion_feasibility,0,2,,Feasibility to complete the motion (based on the maximum torque of the motor selected)
+joule_loss,-1,25,W,Total power loss due to the current flow in the windings
+friction_loss,-1,1,W,Power loss due to friction torque experienced by the motor

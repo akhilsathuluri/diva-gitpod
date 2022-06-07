@@ -1,0 +1,4 @@
+Variables,Lower,Upper,Units,Description
+tcycle,0.0,4.5,s,Time taken to reach the destination location
+reachability,0.0,2.0,,Feasibility of reaching the required points
+static_load,0.0,2.0,,Feasibility of holding a given load at the fully streteched pose

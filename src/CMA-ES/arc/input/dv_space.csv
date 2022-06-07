@@ -1,0 +1,13 @@
+Variables,Lower,Upper,Units,Description
+a1,0.1,0.5,m,Length of link 1
+lua,0.1,0.5,m,Length of the upper arm (a2+a3)
+a23_distr,0,1,-,Distribution of lua between a2 and a3
+lfa,0.1,0.5,m,Length of the lower arm (a4+a5)
+a45_distr,0,1,-,Distribution of lfa between a4 and a5
+K,1,20,-,Proportional gain (Thereby mapped to the derivative gain to ensure overdamped nature behavior)
+taumax,5,40,Nm,Maximum torque available at the joint
+m_m,0.1,1,kg,Motor mass
+N,1,40,,Gear ratio
+Pmax,100,200,,Instantaneous maximum power of the motor
+Kd,1,20,,Gain for Kd
+a7,0.1,0.25,,Length of the hand

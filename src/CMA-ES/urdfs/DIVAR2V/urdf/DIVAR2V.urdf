@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com)
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<!-- Modified inertial data based on AK motors -->
+<robot
+  name="DIVAR2V">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0338364901739526 -0.00033626459572959 -9.69008007512981E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.298766922776314" />
+      <inertia
+        ixx="0.000318637899977369"
+        ixy="-3.60356780952487E-06"
+        ixz="-8.01985345093479E-06"
+        iyy="0.000243715324843074"
+        iyz="-3.99019261867312E-05"
+        izz="0.000150326005973297" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/base_link.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/base_link.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="0.0015605 0.00039961 0.1303"
+        rpy="0 0 0" />
+      <mass
+        value="0.621" />
+      <inertia
+        ixx="0.00063086"
+        ixy="1.0188E-07"
+        ixz="-4.5061E-06"
+        iyy="0.00036201"
+        iyz="2.3142E-08"
+        izz="0.00060371" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/link1.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.3451 0.3451 0.3451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/link1.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="revolute">
+    <origin
+      xyz="0.025 0 0"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="-8.9718E-05 -0.06338 0.0072056"
+        rpy="0 0 0" />
+      <mass
+        value="0.468" />
+      <inertia
+        ixx="0.0002988"
+        ixy="-1.088E-06"
+        ixz="-1.2272E-05"
+        iyy="0.00032243"
+        iyz="-1.6792E-06"
+        izz="0.00027812" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/link2.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.3451 0.3451 0.3451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/link2.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="revolute">
+    <origin
+      xyz="0.00465 0 0.16275"
+      rpy="3.1416 -1.5708 0" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="link3">
+    <inertial>
+      <origin
+        xyz="-0.0027038 -0.00048992 0.18137"
+        rpy="0 0 0" />
+      <mass
+        value="0.562" />
+      <inertia
+        ixx="0.00023922"
+        ixy="-2.8245E-06"
+        ixz="2.5833E-06"
+        iyy="0.00017088"
+        iyz="1.3582E-05"
+        izz="0.00018722" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/link3.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.3451 0.3451 0.3451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/link3.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="revolute">
+    <origin
+      xyz="0 -0.088176 0.0044"
+      rpy="1.5708 -1.4835 0" />
+    <parent
+      link="link2" />
+    <child
+      link="link3" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="link4">
+    <inertial>
+      <origin
+        xyz="-0.046076 -0.00066572 0.010386"
+        rpy="0 0 0" />
+      <mass
+        value="0.468" />
+      <inertia
+        ixx="0.0001459"
+        ixy="2.3566E-06"
+        ixz="2.0693E-06"
+        iyy="0.00010742"
+        iyz="-1.0243E-05"
+        izz="0.00015654" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/link4.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.3451 0.3451 0.3451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/link4.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4"
+    type="revolute">
+    <origin
+      xyz="-0.0083238 0.00013216 0.21184"
+      rpy="1.5708 0.2618 1.5708" />
+    <parent
+      link="link3" />
+    <child
+      link="link4" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="link5">
+    <inertial>
+      <origin
+        xyz="6.9412E-07 -8.0151E-06 0.096764"
+        rpy="0 0 0" />
+      <mass
+        value="0.1834" />
+      <inertia
+        ixx="0.00048569"
+        ixy="-3.3211E-09"
+        ixz="-1.2569E-08"
+        iyy="0.00048571"
+        iyz="2.0111E-10"
+        izz="0.000142" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/link5.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.054902 0.47059 0.9098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/link5.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5"
+    type="revolute">
+    <origin
+      xyz="-0.070176 0.00013216 0.0070738"
+      rpy="1.1947 -1.5708 -1.1926" />
+    <parent
+      link="link4" />
+    <child
+      link="link5" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link  name="eef" />
+  <joint  name="eef_joint"  type="fixed" >
+   <parent  link="link5" />
+   <child  link="eef" />
+   <origin  xyz="0 0 0.235"  rpy="0 0 0" />
+  </joint>
+
+  <transmission  name="trans1" >
+   <type  xmltext="SimpleTransmission" >
+    SimpleTransmission
+   </type>
+   <actuator  name="motor1" >
+    <mechanicalreduction  xmltext="1" >
+     1
+    </mechanicalreduction>
+   </actuator>
+   <joint  name="joint1" />
+  </transmission>
+
+  <transmission  name="trans2" >
+   <type  xmltext="SimpleTransmission" >
+    SimpleTransmission
+   </type>
+   <actuator  name="motor2" >
+    <mechanicalreduction  xmltext="1" >
+     1
+    </mechanicalreduction>
+   </actuator>
+   <joint  name="joint2" />
+  </transmission>
+
+  <transmission  name="trans3" >
+   <type  xmltext="SimpleTransmission" >
+    SimpleTransmission
+   </type>
+   <actuator  name="motor3" >
+    <mechanicalreduction  xmltext="1" >
+     1
+    </mechanicalreduction>
+   </actuator>
+   <joint  name="joint3" />
+  </transmission>
+
+  <transmission  name="trans4" >
+   <type  xmltext="SimpleTransmission" >
+    SimpleTransmission
+   </type>
+   <actuator  name="motor4" >
+    <mechanicalreduction  xmltext="1" >
+     1
+    </mechanicalreduction>
+   </actuator>
+   <joint  name="joint4" />
+  </transmission>
+
+  <transmission  name="trans5" >
+   <type  xmltext="SimpleTransmission" >
+    SimpleTransmission
+   </type>
+   <actuator  name="motor5" >
+    <mechanicalreduction  xmltext="1" >
+     1
+    </mechanicalreduction>
+   </actuator>
+   <joint  name="joint5" />
+  </transmission>
+</robot>

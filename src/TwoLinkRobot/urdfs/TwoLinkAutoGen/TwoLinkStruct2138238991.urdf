@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<robot  name="TwoLinkStruct2138238991" >
+ <material  name="blue" >
+  <color  rgba="0 0 0.8 1.0" />
+ </material>
+ <material  name="red" >
+  <color  rgba="0.8 0 0 1.0" />
+ </material>
+ <link  name="base_link" >
+  <visual >
+   <origin  rpy="0 1.5707 0"  xyz="0 0 0" />
+   <material  name="red" />
+   <geometry >
+    <cylinder  radius="0.1"  length="0.05" />
+   </geometry>
+  </visual>
+ </link>
+ <joint  type="revolute"  name="joint1" >
+  <parent  link="base_link" />
+  <child  link="link1" />
+  <origin  rpy="0 0 0"  xyz="0 0 0" />
+  <axis  xyz="1 0 0" />
+ </joint>
+ <link  name="link1" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0 0 0.1634125515" />
+   <mass  value="0.44239475331399325" />
+   <inertia  izz="0.004030018892822603"  iyy="0.00018433114721416388"  ixx="0.004030018892822603"  ixz="0.0"  ixy="0.0"  iyz="0.0" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0.1634125515" />
+   <material  name="blue" />
+   <geometry >
+    <box  size="0.05 0.1 0.326825103" />
+   </geometry>
+  </visual>
+ </link>
+ <joint  type="fixed"  name="joint-joint-1" >
+  <parent  link="link1" />
+  <child  link="joint-link-1" />
+  <origin  rpy="1.5707 0 0"  xyz="0 0 0.326825103" />
+  <axis  xyz="1 0 0" />
+ </joint>
+ <link  name="joint-link-1" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <mass  value="4.46666737" />
+   <inertia  izz="0"  iyy="0"  ixx="0"  ixz="0"  ixy="0"  iyz="0" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <material  name="red" />
+   <geometry >
+    <sphere  radius="0.05" />
+   </geometry>
+  </visual>
+ </link>
+ <joint  type="revolute"  name="joint2" >
+  <parent  link="link1" />
+  <child  link="link2" />
+  <origin  rpy="1.5707 0 0"  xyz="0 0 0.326825103" />
+  <axis  xyz="1 0 0" />
+ </joint>
+ <link  name="link2" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0 0 0.0790798355" />
+   <mass  value="0.2986146237515733" />
+   <inertia  izz="0.0010143551891160986"  iyy="0.00018433114721416388"  ixx="0.0010143551891160986"  ixz="0.0"  ixy="0.0"  iyz="0.0" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0.0790798355" />
+   <material  name="blue" />
+   <geometry >
+    <box  size="0.05 0.1 0.158159671" />
+   </geometry>
+  </visual>
+ </link>
+ <joint  type="fixed"  name="eef_joint" >
+  <parent  link="link2" />
+  <child  link="eef" />
+  <origin  rpy="0 0 0"  xyz="0 0 0.158159671" />
+ </joint>
+ <link  name="eef" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <mass  value="1" />
+   <inertia  izz="0"  iyy="0"  ixx="0"  ixz="0"  ixy="0"  iyz="0" />
+  </inertial>
+ </link>
+ <transmission  name="motor1" >
+  <type  xmltext="SimpleTransmission" >
+   SimpleTransmission
+  </type>
+  <actuator  name="motor1" >
+   <mechanicalreduction  xmltext="1" >
+    1
+   </mechanicalreduction>
+  </actuator>
+  <joint  name="joint1" />
+ </transmission>
+ <transmission  name="motor2" >
+  <type  xmltext="SimpleTransmission" >
+   SimpleTransmission
+  </type>
+  <actuator  name="motor2" >
+   <mechanicalreduction  xmltext="1" >
+    1
+   </mechanicalreduction>
+  </actuator>
+  <joint  name="joint2" />
+ </transmission>
+</robot>
+
+<!-- {'carti': array([-0.1 ,  0.14,  0.85]), 'cartd': array([-0.1 ,  0.32,  1.29]), 'tau_mu': 0.505202468, 'b0': 0.0, 'Km': 5.0, 'k_velocity': 20.53945, 'tau_max_m': 4.3318283, 'omega_max_m': 1000.0, 'gear_ratio': 11.5320189, 'Kp': 96.3436259, 'Kd': 88.9265165, 'm_m': 4.46666737, 'l1': 0.326825103, 'l2': 0.158159671, 'k1': 10697.2986, 'k2': 205037186.0, 'k3': 1000.0}-->

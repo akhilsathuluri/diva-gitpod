@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="urdftest1128mitmesh">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.053792 0.064697 0.12202"
+        rpy="0 0 0" />
+      <mass
+        value="0.46766" />
+      <inertia
+        ixx="0.00043052"
+        ixy="3.7986E-36"
+        ixz="4.7E-37"
+        iyy="0.00043052"
+        iyz="-1.3792E-18"
+        izz="0.00056143" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdftest1128mitmesh/meshes/base_link.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdftest1128mitmesh/meshes/base_link.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link1">
+    <inertial>
+      <origin
+        xyz="1.94289029309402E-16 2.77555756156289E-17 0.02515"
+        rpy="0 0 0" />
+      <mass
+        value="0.312923284269241" />
+      <inertia
+        ixx="0.000220893589443271"
+        ixy="-2.03287907341008E-20"
+        ixz="7.54861617846302E-19"
+        iyy="0.000220893589443271"
+        iyz="-8.65171134192012E-21"
+        izz="0.000309833166837082" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdftest1128mitmesh/meshes/Link1.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdftest1128mitmesh/meshes/Link1.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="revolute">
+    <origin
+      xyz="0.053792 0.039547 0.21702"
+      rpy="-1.5708 -0.92583 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link2">
+    <inertial>
+      <origin
+        xyz="-1.38777878078145E-17 0 0.0334717054775284"
+        rpy="0 0 0" />
+      <mass
+        value="1.01481172145383" />
+      <inertia
+        ixx="0.0013529646733384"
+        ixy="5.42101086242752E-20"
+        ixz="5.35047043844334E-19"
+        iyy="0.0013529646733384"
+        iyz="1.50157377371074E-19"
+        izz="0.000857112423960414" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdftest1128mitmesh/meshes/Link2.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdftest1128mitmesh/meshes/Link2.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint2"
+    type="revolute">
+    <origin
+      xyz="0 -0.13061 0.02515"
+      rpy="1.5708 -0.89897 -3.1416" />
+    <parent
+      link="Link1" />
+    <child
+      link="Link2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link3">
+    <inertial>
+      <origin
+        xyz="0 1.11022302462516E-16 -0.05"
+        rpy="0 0 0" />
+      <mass
+        value="0.312923284269241" />
+      <inertia
+        ixx="0.000220893589443272"
+        ixy="0"
+        ixz="-4.06575814682064E-20"
+        iyy="0.000220893589443271"
+        iyz="-1.01643953670516E-19"
+        izz="0.000309833166837082" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdftest1128mitmesh/meshes/Link3.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdftest1128mitmesh/meshes/Link3.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint3"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.18339"
+      rpy="1.5708 1.0303 -1.5708" />
+    <parent
+      link="Link2" />
+    <child
+      link="Link3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-314"
+      upper="314"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link4">
+    <inertial>
+      <origin
+        xyz="-2.22044604925031E-16 -8.32667268468867E-17 0.0104194342996191"
+        rpy="0 0 0" />
+      <mass
+        value="0.279844788960515" />
+      <inertia
+        ixx="0.00050656775016726"
+        ixy="0"
+        ixz="-1.27901975035399E-18"
+        iyy="0.00050656775016726"
+        iyz="1.15196480826585E-19"
+        izz="0.000129410571319802" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdftest1128mitmesh/meshes/Link4.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdftest1128mitmesh/meshes/Link4.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint4"
+    type="revolute">
+    <origin
+      xyz="0 -0.11356 -0.05"
+      rpy="-1.5708 -0.75823 -3.1416" />
+    <parent
+      link="Link3" />
+    <child
+      link="Link4" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-314"
+      upper="314"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link5">
+    <inertial>
+      <origin
+        xyz="-2.22044604925031E-16 0 -8.32667268468867E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.165580782400104" />
+      <inertia
+        ixx="7.81575788924823E-05"
+        ixy="3.3881317890172E-21"
+        ixz="-1.32137139771671E-19"
+        iyy="7.81575788924823E-05"
+        iyz="-2.03287907341032E-20"
+        izz="0.000119549324892875" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdftest1128mitmesh/meshes/Link5.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdftest1128mitmesh/meshes/Link5.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint5"
+    type="revolute">
+    <origin
+      xyz="0 0 0.16644"
+      rpy="1.5708 -1.5184 0" />
+    <parent
+      link="Link4" />
+    <child
+      link="Link5" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-314"
+      upper="314"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link6">
+    <inertial>
+      <origin
+        xyz="-1.11022302462516E-16 1.49880108324396E-15 -0.0605243584568671"
+        rpy="0 0 0" />
+      <mass
+        value="0.191483543777463" />
+      <inertia
+        ixx="8.77951239918788E-05"
+        ixy="6.7762635780344E-21"
+        ixz="6.43745039913268E-20"
+        iyy="8.77951239918788E-05"
+        iyz="4.74338450462408E-20"
+        izz="0.000121228070353681" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdftest1128mitmesh/meshes/Link6.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdftest1128mitmesh/meshes/Link6.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint6"
+    type="revolute">
+    <origin
+      xyz="0 0.01 0"
+      rpy="1.5708 0.30176 0" />
+    <parent
+      link="Link5" />
+    <child
+      link="Link6" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-314"
+      upper="314"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

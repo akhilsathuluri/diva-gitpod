@@ -1,0 +1,13 @@
+Variables,Lower,Upper,Units,Description,Cluster
+a1,0.297,0.367,m,Length of link 1,Kinematic attributes
+lua,0.337,0.394,m,Length of the upper arm (a2+a3),Kinematic attributes
+a23_distr,0,1,-,Distribution of lua between a2 and a3,Kinematic attributes
+lfa,0.31,0.36,m,Length of the lower arm (a4+a5),Kinematic attributes
+a45_distr,0,1,-,Distribution of lfa between a4 and a5,Kinematic attributes
+rho,1000,8500,kg/m^3,Density of the links,Mechanical attributes
+s2,0.0608,0.0792,m,Side length of the square that fits within the upper arm radius,Mechanical attributes
+s4,0.0353,0.0438,m,Side length of the square that fits within the upper arm radius,Mechanical attributes
+K,1,10,-,Proportional gain (Thereby mapped to the derivative gain to ensure overdamped nature behavior),Control attributes
+taumax,5,20,Nm,Maximum torque available at the joint,Actuator attributes
+m_m,0.3,0.8,kg,Motor mass,Actuator attributes
+N,1,12,,Gear ratio,Actuator attributes

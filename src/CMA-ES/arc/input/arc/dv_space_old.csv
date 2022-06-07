@@ -1,0 +1,9 @@
+Variables,Lower,Upper,Units,Description
+a1,0.297,0.367,m,Length of link 1
+a2,0.094,0.285,m,Length of link 2 given length of the upper arm is fixed
+a4,0.094,0.344,m,Length of link 4 given length of the lower arm is fixed
+rho,1000,8500,kg/m^3,Density of the links
+s2,0.608,0.792,,Side length of the square that fits within the upper arm radius
+s4,0.353,0.438,,Side length of the square that fits within the upper arm radius
+K,1,35,,Proportional gain (Thereby mapped to the derivative gain to ensure overdamped nature behavior)
+taumax,0,15,Nm,Maximum torque available at the joint

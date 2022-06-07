@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com)
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="URDFModelTang">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.15602 -0.5076 2.919"
+        rpy="0 0 0" />
+      <mass
+        value="195.22" />
+      <inertia
+        ixx="146.42"
+        ixy="-0.5147"
+        ixz="-16.934"
+        iyy="301.55"
+        iyz="-1.5782"
+        izz="158.68" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/base_link.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/base_link.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Firstlink">
+    <inertial>
+      <origin
+        xyz="-1.1799 0.3577 1.368"
+        rpy="0 0 0" />
+      <mass
+        value="195.22" />
+      <inertia
+        ixx="146.42"
+        ixy="-0.5147"
+        ixz="16.934"
+        iyy="301.55"
+        iyz="1.5782"
+        izz="158.68" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Firstlink.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Firstlink.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J1"
+    type="prismatic">
+    <origin
+      xyz="-1.0239 -0.1499 1.551"
+      rpy="0 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="Firstlink" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Secondlink">
+    <inertial>
+      <origin
+        xyz="0.21199 -0.0073043 -0.64548"
+        rpy="0 0 0" />
+      <mass
+        value="195.22" />
+      <inertia
+        ixx="146.42"
+        ixy="-0.5147"
+        ixz="16.934"
+        iyy="301.55"
+        iyz="1.5782"
+        izz="158.68" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Secondlink.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Secondlink.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J2"
+    type="continuous">
+    <origin
+      xyz="-1.3919 0.365 2.0135"
+      rpy="0 0 0" />
+    <parent
+      link="Firstlink" />
+    <child
+      link="Secondlink" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Thirdlink">
+    <inertial>
+      <origin
+        xyz="0.35106 0.072989 -0.69448"
+        rpy="0 0 0" />
+      <mass
+        value="195.22" />
+      <inertia
+        ixx="146.42"
+        ixy="-0.5147"
+        ixz="16.934"
+        iyy="301.55"
+        iyz="1.5782"
+        izz="158.68" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Thirdlink.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Thirdlink.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J3"
+    type="continuous">
+    <origin
+      xyz="-0.13907 -0.080294 0.049"
+      rpy="0 0 0" />
+    <parent
+      link="Secondlink" />
+    <child
+      link="Thirdlink" />
+    <axis
+      xyz="0.86603 0.5 0" />
+  </joint>
+  <link
+    name="Fourthlink">
+    <inertial>
+      <origin
+        xyz="0.46487 0.1387 -0.69448"
+        rpy="0 0 0" />
+      <mass
+        value="195.22" />
+      <inertia
+        ixx="146.42"
+        ixy="-0.5147"
+        ixz="16.934"
+        iyy="301.55"
+        iyz="1.5782"
+        izz="158.68" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Fourthlink.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Fourthlink.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J4"
+    type="continuous">
+    <origin
+      xyz="-0.11381 -0.065706 0"
+      rpy="0 0 0" />
+    <parent
+      link="Thirdlink" />
+    <child
+      link="Fourthlink" />
+    <axis
+      xyz="-0.5 0.86603 0" />
+  </joint>
+  <link
+    name="Fifthlink">
+    <inertial>
+      <origin
+        xyz="0.46467 0.13905 -0.30548"
+        rpy="0 0 0" />
+      <mass
+        value="195.22" />
+      <inertia
+        ixx="146.42"
+        ixy="-0.5147"
+        ixz="16.934"
+        iyy="301.55"
+        iyz="1.5782"
+        izz="158.68" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Fifthlink.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Fifthlink.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J5"
+    type="continuous">
+    <origin
+      xyz="0.00020483 -0.00035478 -0.389"
+      rpy="0 0 0" />
+    <parent
+      link="Fourthlink" />
+    <child
+      link="Fifthlink" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+
+  <!-- <joint  type="revolute"  name="int_joint" >
+   <parent  link="Fifthlink" />
+   <child  link="int_link" />
+   <origin  rpy="0 0 0.5236"  xyz="0 0 -0.1" />
+   <axis
+     xyz="0 1 0" />
+  </joint>
+  <link  name="int_link" /> -->
+
+  <link
+    name="Sixthlink">
+    <inertial>
+      <origin
+        xyz="-1.1888 0.35305 1.36"
+        rpy="0 0 0" />
+      <mass
+        value="195.22" />
+      <inertia
+        ixx="146.42"
+        ixy="-0.5147"
+        ixz="16.934"
+        iyy="301.55"
+        iyz="1.5782"
+        izz="158.68" />
+    </inertial>
+    <visual>
+      <!-- <origin
+        xyz="1.6534 -0.214 -1.57"
+        rpy="0.05 0 -0.02" /> -->
+        <origin
+          xyz="0 0 0"
+          rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Sixthlink.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Sixthlink.obj" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint  type="revolute"  name="J6" >
+   <parent  link="Fifthlink" />
+   <child  link="Sixthlink" />
+   <origin  rpy="0 0 0.5236"  xyz="0 0 -0.1" />
+   <axis
+     xyz="0 1 0" />
+  </joint>
+
+  <link  name="eef" />
+
+  <joint  type="fixed"  name="eef_joint" >
+   <parent  link="Sixthlink" />
+   <child  link="eef" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </joint>
+
+  <!-- <joint  type="revolute"  name="J6" >
+   <parent  link="Sixthlink" />
+   <child  link="int_link" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <axis
+     xyz="0 1 0" />
+  </joint> -->
+
+  <!-- <joint
+    name="J6"
+    type="continuous">
+    <origin
+      xyz="1.6534 -0.214 -1.6655"
+      rpy="0 0 0" />
+    <parent
+      link="Fifthlink" />
+    <child
+      link="Sixthlink" />
+    <axis
+      xyz="-0.5 0.86603 0" />
+  </joint> -->
+</robot>

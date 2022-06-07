@@ -1,0 +1,13 @@
+Variables,Lower,Upper,Units,Description,Unnamed: 5,Unnamed: 6
+a2,0.07,0.177,m,Length of link 1,,a2
+a3,0.0595,0.157,m,Length of link 2,,a3
+lua,0.1845,0.251,m,Length of link 3,,lua
+a4,0.05,0.1995,m,Length of link 4,,a4
+lfa,0.101,0.153,m,Length of link 5,,lfa
+a5,0.1,0.174,m,Length of link 6,,a5
+d1,-0.05,0.0008,m,Offset-1,,
+d2,-0.05,0.02,m,Offset-2,,
+rho,1000,3670,kg/m^3,Density of the links,,
+d,0.005,0.01697,m,Diameter of the links,,
+K,9.908,28.336,,Proportional gain,Thereby mapped to the derivative gain to ensure overdamped nature behavoir,Feedback linearisation (PD control)
+taumax,8.85,11.58,Nm,Maximum torque available at the joint,,

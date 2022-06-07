@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="urdftest1128mitmesh">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.053792 0.064697 0.12202"
+        rpy="0 0 0" />
+      <mass
+        value="0.46766" />
+      <inertia
+        ixx="0.00043052"
+        ixy="3.7986E-36"
+        ixz="4.7E-37"
+        iyy="0.00043052"
+        iyz="-1.3792E-18"
+        izz="0.00056143" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./urdftest1128mitmesh/meshes/base_link.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./urdftest1128mitmesh/meshes/base_link.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link1">
+    <inertial>
+      <origin
+        xyz="1.94289029309402E-16 2.77555756156289E-17 0.02515"
+        rpy="0 0 0" />
+      <mass
+        value="0.312923284269241" />
+      <inertia
+        ixx="0.000220893589443271"
+        ixy="-2.03287907341008E-20"
+        ixz="7.54861617846302E-19"
+        iyy="0.000220893589443271"
+        iyz="-8.65171134192012E-21"
+        izz="0.000309833166837082" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./urdftest1128mitmesh/meshes/Link1.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./urdftest1128mitmesh/meshes/Link1.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="revolute">
+    <origin
+      xyz="0.053792 0.039547 0.21702"
+      rpy="-1.5708 -0.92583 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

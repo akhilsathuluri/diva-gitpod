@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com)
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="URDF_Model_22-02-28">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.15602 -2.919 0.5076"
+        rpy="0 0 0" />
+      <mass
+        value="195.22" />
+      <inertia
+        ixx="146.42"
+        ixy="-16.934"
+        ixz="-0.5147"
+        iyy="158.68"
+        iyz="-1.5782"
+        izz="301.55" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/base_link.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/base_link.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Firobjink">
+    <inertial>
+      <origin
+        xyz="-1.1799 0.3577 1.368"
+        rpy="0 0 0" />
+      <mass
+        value="195.22" />
+      <inertia
+        ixx="146.42"
+        ixy="-0.5147"
+        ixz="16.934"
+        iyy="301.55"
+        iyz="1.5782"
+        izz="158.68" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Firobjink.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Firobjink.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J1"
+    type="prismatic">
+    <origin
+      xyz="1.0238854350711 -1.55099999999999 0.1499044295972"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Firobjink" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Secondlink">
+    <inertial>
+      <origin
+        xyz="0.211990772854572 -0.00730432715233398 -0.6454843568912"
+        rpy="0 0 0" />
+      <mass
+        value="195.222198556067" />
+      <inertia
+        ixx="146.424405806793"
+        ixy="-0.514695231402459"
+        ixz="16.933990275106"
+        iyy="301.553722475034"
+        iyz="1.57818445418204"
+        izz="158.679413231981" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Secondlink.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Secondlink.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J2"
+    type="continuous">
+    <origin
+      xyz="-1.39189794651184 0.365000000478744 2.01349997543614"
+      rpy="0 0 0" />
+    <parent
+      link="Firobjink" />
+    <child
+      link="Secondlink" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Thirdlink">
+    <inertial>
+      <origin
+        xyz="0.351063214375461 0.07298918439661 -0.694484381880002"
+        rpy="0 0 0" />
+      <mass
+        value="195.222198556067" />
+      <inertia
+        ixx="146.424405806793"
+        ixy="-0.514695231402459"
+        ixz="16.933990275106"
+        iyy="301.553722475034"
+        iyz="1.57818445418204"
+        izz="158.679413231981" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Thirdlink.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Thirdlink.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J3"
+    type="continuous">
+    <origin
+      xyz="-0.139072441520889 -0.080293511548944 0.0490000249888016"
+      rpy="0 0 0" />
+    <parent
+      link="Secondlink" />
+    <child
+      link="Thirdlink" />
+    <axis
+      xyz="0.866025403784425 0.500000000000024 0" />
+  </joint>
+  <link
+    name="Fourthlink">
+    <inertial>
+      <origin
+        xyz="0.464870190757157 0.138695672846245 -0.694484381880006"
+        rpy="0 0 0" />
+      <mass
+        value="195.222198556067" />
+      <inertia
+        ixx="146.424405806793"
+        ixy="-0.514695231402459"
+        ixz="16.933990275106"
+        iyy="301.553722475034"
+        iyz="1.57818445418204"
+        izz="158.679413231981" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Fourthlink.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Fourthlink.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J4"
+    type="continuous">
+    <origin
+      xyz="-0.113806976381696 -0.0657064884496346 0"
+      rpy="0 0 0" />
+    <parent
+      link="Thirdlink" />
+    <child
+      link="Fourthlink" />
+    <axis
+      xyz="-0.500000000000022 0.866025403784426 0" />
+  </joint>
+  <link
+    name="Fifthlink">
+    <inertial>
+      <origin
+        xyz="0.464665360686032 0.139050448936402 -0.305484407029091"
+        rpy="0 0 0" />
+      <mass
+        value="195.222198556067" />
+      <inertia
+        ixx="146.424405806793"
+        ixy="-0.514695231402459"
+        ixz="16.933990275106"
+        iyy="301.553722475034"
+        iyz="1.57818445418204"
+        izz="158.679413231981" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Fifthlink.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Fifthlink.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J5"
+    type="continuous">
+    <origin
+      xyz="0.000204830071124262 -0.000354776090157438 -0.388999974850916"
+      rpy="0 0 0" />
+    <parent
+      link="Fourthlink" />
+    <child
+      link="Fifthlink" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="Sixthlink">
+    <inertial>
+      <origin
+        xyz="0.464665360686032 0.139050448936402 -0.305484407029091"
+        rpy="0 0 0" />
+      <mass
+        value="195.222198556067" />
+      <inertia
+        ixx="146.424405806793"
+        ixy="-0.514695231402459"
+        ixz="16.933990275106"
+        iyy="301.553722475034"
+        iyz="1.57818445418204"
+        izz="158.679413231981" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Sixthlink.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Sixthlink.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J6"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Fifthlink" />
+    <child
+      link="Sixthlink" />
+    <axis
+      xyz="0.5 -0.86603 -1" />
+  </joint>
+</robot>

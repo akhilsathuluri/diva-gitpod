@@ -1,0 +1,4 @@
+#!/bin/sh
+export PYTHONPATH=~/git/manipulation:${PYTHONPATH}
+cd ./src/
+jupyter notebook
